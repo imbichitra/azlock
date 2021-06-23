@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/security_logo"
+        android:layout_width="168dp"
+        android:layout_height="169dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="110dp"
+        android:src="@drawable/ic_app_security"
+        android:contentDescription="@string/todo" />
+    <TextView
+        android:text="@string/azlock_requires_permission_to_access_your_content_which_makes_everything_easier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:layout_margin="20dp"
+        android:textColor="#d9dce2"
+        android:textSize="16sp"
+        android:lineSpacingExtra="6dp"
+        android:layout_below="@+id/security_logo"
+        android:id="@+id/textView3" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background"
+        android:text="@string/turn_on"
+        android:textColor="@color/white"
+        android:id="@+id/turn_on_button"
+        android:onClick="onClickTurnOnPermissionButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

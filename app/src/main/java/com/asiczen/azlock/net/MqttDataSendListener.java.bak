@@ -1,0 +1,7 @@
+package com.asiczen.azlock.net;
+
+public interface MqttDataSendListener {
+    void sendData(byte[] data, String subscribeTopic, String publishTopic, MqttInterface myInterface);
+    void unSubscribe(String topic);
+    void disconnectMqtt();
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/images"
+            android:padding="8dp"
+            android:src="@drawable/ic_password" />
+        <TextView
+            android:id="@+id/pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/change_password"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"  />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/images"
+            android:padding="8dp"
+            android:src="@drawable/ic_lock_add" />
+        <TextView
+            android:id="@+id/lockadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:onClick="onClickadd"
+            android:text="@string/add_lock"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/images"
+            android:padding="8dp"
+            android:src="@drawable/ic_reset_lock" />
+        <TextView
+            android:id="@+id/resetlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:onClick="showDialog"
+            android:text="@string/reset_lock"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/battery_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/images"
+            android:padding="8dp"
+            android:src="@drawable/ic_battery" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/battery_status"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/images"
+            android:padding="8dp"
+            android:src="@drawable/logout" />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/logout"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>
+

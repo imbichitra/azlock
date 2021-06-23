@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="conf_bridge_options">
+        <item>WiFi Config</item>
+        <item>Added Locks</item>
+        <item>Change Password</item>
+        <item>Bridge Credential</item>
+    </string-array>
+</resources>

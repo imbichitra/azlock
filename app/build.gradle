@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+def USERID = '"' + UserId + '"' ?: '"User id is not found"'
+def PASSWORD = '"' + Password + '"' ?: '"Password is not found"'
+def PORT = '"' + Port + '"' ?: '"Port not found"'
+def KEY = '"' + key + '"' ?: '"key not found"'
+def APP_KEY = '"' + App_key + '"' ?: '"key not found"'
+android {
+    compileSdkVersion 29
+    buildToolsVersion '28.0.3'
+
+    //aaptOptions.cruncherEnabled = false
+
+    defaultConfig {
+        applicationId "com.asiczen.azlock"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 23
+        versionName "5.5.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        each { type ->
+            buildConfigField "String", 'UserId', USERID
+            buildConfigField "String", 'Password', PASSWORD
+            buildConfigField "String", 'Port', PORT
+            buildConfigField "String", 'key', KEY
+            buildConfigField "String", 'App_key', APP_KEY
+        }
+        manifestPlaceholders = [
+
+                USER_KEY    : 'USERID',
+                PASSWORD_KEY: 'PASSWORD',
+                PORT_NAME   : 'PORT',
+                KEY_NAME    : 'KEY',
+                APP_KEY_NAME: 'APP_KEY'
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path '../jni/Android.mk'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //implementation 'com.mcxiaoke.volley:library:1.0.19'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.markushi:circlebutton:1.1'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.16'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    testImplementation 'org.testng:testng:6.9.6'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.percentlayout:percentlayout:1.0.0'
+
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+
+    //qrcode zeneration
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    //qrcode scann
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+
+    implementation files('libs/org.eclipse.paho.android.service-1.1.1.jar')
+    implementation files('libs/org.eclipse.paho.client.mqttv3-1.1.1.jar')
+    implementation 'com.hudomju:swipe-to-dismiss-undo:1.0'
+
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.chaos.view:pinview:1.4.4'
+}
+android.buildTypes.release.ndk.debugSymbolLevel = 'FULL'

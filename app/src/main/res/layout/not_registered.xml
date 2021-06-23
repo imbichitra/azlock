@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#e0e2e5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/lock_logo"
+        android:src="@mipmap/ic_not_registered"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/warning" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="#4286f4"
+        android:text="@string/request_access"
+        android:textColor="@color/white"
+        android:id="@+id/request_button"
+        android:onClick="onClickRequestAccessButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:text="@string/you_are_not_registered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lock_logo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView" />
+
+    <!--<EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:background="#e5e6e8"
+        android:textSize="10dp"
+        android:ems="5"
+        android:lines="4"
+        android:textColor="@color/black"
+        android:scrollbars="vertical"
+        app:layout_heightPercent="20%"
+        app:layout_marginBottomPercent="4%"
+        android:id="@+id/sms_editText"
+        android:layout_above="@+id/request_button"
+        android:layout_alignStart="@+id/request_button"
+        android:layout_alignEnd="@+id/request_button" />-->
+
+    <TextView
+        android:text="@string/message_body_can_t_be_empty"
+        android:textColor="@color/red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/request_button"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/error_textView"
+        android:visibility="gone"
+        android:layout_alignStart="@+id/request_button"
+        android:layout_alignEnd="@+id/request_button" />
+</RelativeLayout>

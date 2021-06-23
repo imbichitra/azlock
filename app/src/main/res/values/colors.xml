@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="holo_blue">#FF33B5E5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="black">#000000</color>
+    <color name="light_blue">#3399FF</color>
+    <color name="dodger_blue">#1E90FF</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="dimgray">#696969</color>
+    <color name="red">#FF0000</color>
+    <color name="mintcream">#F5FFFA</color>
+    <color name="whitesmoke">#F5F5F5</color>
+    <color name="blue_smoke">#a5c5f7</color>
+
+   <!-- <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>#4286f4-->
+    <color name="colorPrimary">#1F618D</color>
+    <color name="colorPrimaryDark">#1F618D</color>
+    <color name="primary">#03A9F4</color>
+    <color name="primaryDark">#0288D1</color>
+    <color name="editTextBottomColor">#8f8d8d</color>
+    <color name="backgroundColor">#FDFEFE</color>
+    <color name="pink1">#F06862</color>
+    <color name="dark">#273746</color>
+    <color name="pink">#EF366B</color>
+    <color name="transparent">#0000ffff </color>
+    <color name="red_1">#F23B5F</color>
+    <color name="gray">#253A4B</color>
+    <color name="light_gray">#E8EBEC</color>
+    <color name="green">#2b8ccf</color>
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="slider">#34495E</color>
+    <color name="slider1">#17202A</color>
+    <color name="slider2">#CD6155</color>
+</resources>

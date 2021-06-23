@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bridge_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/bridge_image_id"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:contentDescription="@string/images"
+        android:padding="8dp"
+        android:src="@drawable/ic_settings" />
+
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/bridge_titel_id"
+        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/configure_bridge"
+        android:textSize="15sp"
+        android:textColor="@color/black" />
+
+</LinearLayout>

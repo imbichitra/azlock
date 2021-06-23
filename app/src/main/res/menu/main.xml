@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+  <item android:id="@+id/Settings" android:title="@string/LacertaSettings"
+      android:icon="@mipmap/ic_settings_white_24dp"
+      android:orderInCategory="100" app:showAsAction="ifRoom"/>
+  <item android:id="@+id/Key"
+      android:title="@string/key"
+      android:orderInCategory="100" app:showAsAction="never"/>
+  <!--<item android:id="@+id/Configure_bridge"
+      android:title="Configure bridge"
+      android:orderInCategory="100"/>-->
+  <!--<item android:id="@+id/SAVED_NETWORKS" android:title="Saved Networks"
+      android:orderInCategory="100" app:showAsAction="never"/>
+  <item android:id="@+id/Changepin"
+      android:title="Change Pin"
+      android:orderInCategory="100"/>-->
+
+    <item android:id="@+id/Guide"
+      android:title="@string/LacertaGuide"
+      android:orderInCategory="100"/>
+  <item android:id="@+id/About"
+      android:title="@string/LacertaAbout"
+      android:orderInCategory="100"/>
+  <item android:id="@+id/RaiseIssue"
+      android:title="@string/support"
+      android:orderInCategory="100" app:showAsAction="never"/>
+
+</menu>

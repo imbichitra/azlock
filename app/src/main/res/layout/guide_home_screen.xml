@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/linearlayout1"
+        android:background="@color/primary">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/home_screen"
+            android:id="@+id/textView1"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:id="@+id/imageView"
+        android:layout_below="@id/linearlayout1"
+        android:src="@drawable/home_menu_battery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:contentDescription="@string/todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/ic_more_vert_black_16dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView13"
+        android:text="@string/ThreeDotsOption"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginStart="23dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView3"
+        android:src="@drawable/ic_settings_black_18dp"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:text="@string/SettingsOption"
+        android:lineSpacingExtra="5dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignStart="@+id/textView13" />
+
+</RelativeLayout>

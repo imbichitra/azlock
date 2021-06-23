@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/dob2_editText"
+        android:layout_width="260dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/editwhite"
+        android:gravity="center"
+        android:hint="@string/yyyy_mm_dd"
+        android:textSize="16dp"
+        android:clickable="true"
+        android:inputType="date"
+        tools:ignore="SpUsage,TextViewEdits"
+        android:focusable="true" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/dob2_editText"
+        android:layout_alignTop="@+id/cancel"
+        android:background="@drawable/background"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/dob2_editText"
+        android:layout_below="@+id/dob2_editText"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/background"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/enter_dob"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/openReset"
+        android:layout_alignParentEnd="true"
+        android:text="@string/enter_reset_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="RelativeOverlap,SpUsage"
+        android:textSize="15dp"
+        />
+</RelativeLayout>

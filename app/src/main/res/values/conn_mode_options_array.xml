@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="conn_options">
+        <item>Lock/Unlock Sound</item>
+        <item>Configure Bridge</item>
+        <item>Show Key</item>
+        <item>Ask Pin every time</item>
+        <item>Lock/Unlock Sound</item>
+    </string-array>
+</resources>

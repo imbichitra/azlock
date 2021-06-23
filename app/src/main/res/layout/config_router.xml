@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="@color/backgroundColor"
+        android:textSize="20sp"
+        android:background="@color/primary"
+        android:paddingTop="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="18dp"
+        android:text="@string/demo"
+        android:layout_gravity="center"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--<EditText
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ssid_editText"
+        android:layout_gravity="center"
+        android:hint="@string/LacertaSsid"
+        />-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:paddingEnd="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ssid_editText"
+            android:layout_gravity="center"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--<EditText
+        android:paddingStart="10dp"
+        android:paddingEnd="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_editText"
+        android:inputType="textPassword"
+        android:hint="@string/LacertaPasswd"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:paddingStart="10dp"
+            android:paddingEnd="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/password_editText"
+            android:inputType="textPassword"
+            android:hint="@string/LacertaPasswd"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fields_cannot_be_empty"
+        android:textColor="@color/red"
+        android:id="@+id/error_textView"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textSize="20sp"
+            android:id="@+id/cancel"
+            android:text="@string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary"
+            android:textAllCaps="false"
+            style="?android:attr/borderlessButtonStyle"/>
+        <Button
+            android:textSize="20sp"
+            android:textColor="@color/primary"
+            android:id="@+id/next"
+            android:text="@string/configure"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:fitsSystemWindows="true"
+        android:theme="@style/list_item_appearance"
+        app:headerLayout="@layout/nav_header"
+        app:itemBackground="@drawable/drawer_selected_item"
+        app:menu="@menu/navigation_menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <ImageView
+                android:id="@+id/nav_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/white_circel"
+                android:contentDescription="adsa"
+                android:elevation="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:padding="9dp"
+                android:src="@drawable/ic_menu_black_24dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText"
+                tools:targetApi="lollipop" />
+
+            <ImageView
+                android:layout_marginTop="8dp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/lock_1"
+                android:contentDescription="@string/todo" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle"
+            android:elevation="10dp"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:id="@+id/onClickBleLayout"
+                android:onClick="onClickBleLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="20dp"
+                android:src="@drawable/bluetooth"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:fontFamily="monospace"
+            android:text="@string/lock" />
+
+        <LinearLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/circle"
+            android:elevation="10dp"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:onClick="onClickInternetLayout"
+                android:id="@+id/internet_linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="20dp"
+                android:src="@drawable/internet"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:text="@string/bridge" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="bottom|center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/b1"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:paddingTop="3dp"
+                android:src="@drawable/ic_lock1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/lock_one"
+                android:maxLength="15"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/lock_1"
+                android:fontFamily="monospace"
+                android:paddingBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/b2"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:paddingTop="3dp"
+                android:src="@drawable/ic_lock1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/lock_two"
+                android:maxLength="15"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/lock_2"
+                android:fontFamily="monospace"
+                android:paddingBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/b3"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/background"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:paddingTop="3dp"
+                android:src="@drawable/ic_lock1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo" />
+            <TextView
+                android:id="@+id/lock_three"
+                android:maxLength="15"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/lock_3"
+                android:fontFamily="monospace"
+                android:paddingBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

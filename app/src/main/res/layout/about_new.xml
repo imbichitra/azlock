@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/version"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/textView22" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/version" />
+    <View
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:background="#ddd"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/LacertaCopyrightText"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/textView25" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LacertaCopyrightDetailText"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/textView26" />
+    <!--<View
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:background="#ddd"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/LacertaDeveloperText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/textView27" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LacertaDeveloperDetailText"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/textView28" />-->
+    <View
+        android:layout_width="340dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:background="#ddd"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/LacertaLikeusText"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:id="@+id/textView29" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:contentDescription="@string/facebook_circle"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:src="@drawable/facebook_circle"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:background="@null"
+        android:id="@+id/facebook_imageButton" />
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:src="@drawable/twitter"
+        android:layout_marginStart="15dp"
+        android:background="@null"
+        android:id="@+id/google_plus_imageButton"
+        android:layout_alignTop="@id/facebook_imageButton"
+        android:layout_toEndOf="@id/facebook_imageButton"
+        android:contentDescription="@string/google_plus_imagebutton" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/youtube"
+            android:layout_marginStart="15dp"
+            android:background="@null"
+            android:id="@+id/youtube_imageView"
+            android:layout_alignTop="@id/google_plus_imageButton"
+            android:layout_toEndOf="@id/google_plus_imageButton"
+            android:contentDescription="@string/youtube_imageview" />
+    </RelativeLayout>
+
+</LinearLayout>

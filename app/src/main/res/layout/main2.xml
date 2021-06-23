@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_register_1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:onClick="goBack"
+            android:elevation="5dp"
+            android:id="@+id/back"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/white_circle"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:padding="9dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:contentDescription="@string/todo"
+            tools:targetApi="lollipop" />
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="10dp"
+                android:src="@drawable/ic_question" />
+            <Switch
+                android:id="@+id/checkBox1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:checked="false"
+                android:switchMinWidth="50dp"
+                android:text="@string/ask_pin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="20sp"
+                tools:checked="false" />
+        </LinearLayout>-->
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/images"
+                android:padding="8dp"
+                android:src="@drawable/key" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/img2"
+                android:text="@string/ask_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                tools:ignore="RelativeOverlap" />
+            <RadioGroup
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:checkedButton="@+id/pin_off"
+                android:id="@+id/pin_toggle"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/pink_out_line"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/pin_off"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/off"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    tools:ignore="SpUsage"/>
+
+                <RadioButton
+                    android:id="@+id/pin_on"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/on"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    tools:ignore="SpUsage"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="10dp"
+                android:src="@drawable/volume" />
+            <Switch
+                android:id="@+id/checkBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:switchMinWidth="50dp"
+                android:padding="3dp"
+                android:text="@string/lock_sound"
+                android:textSize="20sp" />
+        </LinearLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/images"
+                android:padding="8dp"
+                android:src="@drawable/volume" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/img"
+                android:text="@string/lock_sound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                tools:ignore="RelativeOverlap" />
+            <RadioGroup
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:checkedButton="@+id/sound_off"
+                android:id="@+id/sound_toggle"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/pink_out_line"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sound_off"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/off"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    tools:ignore="SpUsage"/>
+
+                <RadioButton
+                    android:id="@+id/sound_on"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/on"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    tools:ignore="SpUsage"/>
+            </RadioGroup>
+        </RelativeLayout>
+
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="10dp"
+                android:src="@drawable/vibrate" />
+            <Switch
+                android:id="@+id/checkBox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:switchMinWidth="50dp"
+                android:text="@string/shake"
+                android:textSize="20sp" />
+        </LinearLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/img1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="8dp"
+                android:src="@drawable/vibrate" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/img1"
+                android:text="@string/shake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                tools:ignore="RelativeOverlap" />
+            <RadioGroup
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:checkedButton="@+id/shake_off"
+                android:id="@+id/shake_toggle"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/pink_out_line"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/shake_off"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/off"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    tools:ignore="SpUsage" />
+
+                <RadioButton
+                    android:id="@+id/shake_on"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/on"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    tools:ignore="SpUsage" />
+            </RadioGroup>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="8dp"
+                android:src="@drawable/ic_password" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/change_pin"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <!--<TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Saved Networks"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ddd" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="8dp"
+                android:src="@drawable/router" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/bridge_activity"
+                android:onClick="bridgeActivity"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ddd" />
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/configure_bridge"
+            android:textColor="@color/black"
+            android:textSize="20sp" />-->
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ddd" />
+
+        <TextView
+            android:id="@+id/bridge_regd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/bridge_registration"
+            android:textColor="@color/black"
+            android:textSize="20sp" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/images"
+                android:padding="8dp"
+                android:src="@drawable/ic_login" />
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:text="@string/account"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#ddd" />
+        <TextView
+            android:id="@+id/add_bridge_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_bridge"
+            android:textColor="@color/black"
+            android:textSize="20sp" />-->
+    </LinearLayout>
+</ScrollView>
+
+

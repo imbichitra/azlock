@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:textColor="@android:color/black"
+    >
+    <TextView
+        android:id="@+id/paired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/paired"
+        android:visibility="gone"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@android:color/black"
+            android:paddingTop="5dp"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="1%"
+            android:text="@string/azlock"
+            android:textSize="17sp" />
+        <TextView
+            android:textColor="@android:color/black"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="5dp"
+            android:id="@+id/rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+        <TextView
+            android:textColor="@android:color/black"
+            android:text="@string/mac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginBottomPercent="1%"
+            android:textColor="@android:color/black"
+            android:text="@string/_12_43_21_65_ff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@android:color/black"
+            android:text="@string/rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginStart="10dp"
+            app:layout_marginBottomPercent="1%"
+            android:id="@+id/rssi1"
+            android:textColor="@android:color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

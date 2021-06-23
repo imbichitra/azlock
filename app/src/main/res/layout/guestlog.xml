@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent" android:layout_height="60dp"
+    android:id="@+id/guest_log_linearLayout"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guest_imageView"
+        android:src="@mipmap/ic_user_"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/guest_image" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/guest_name"
+        android:id="@+id/guestName_textView"
+        android:scrollbars="horizontal"
+        android:maxLines="3"
+        android:textColor="#000000"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/july_10_2015_10_05_am"
+        android:layout_marginStart="10dp"
+        android:textColor="#000000"
+        android:id="@+id/access_datetime_textView"
+        tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/statusImageView"
+            android:src="@mipmap/ic_done_white_48dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/todo" />
+        </RelativeLayout>
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Success"
+            android:textColor="#336600"
+            android:id="@+id/access_status_textView"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/guestName_textView" /> -->
+    </RelativeLayout>
+</LinearLayout>

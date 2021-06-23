@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        tools:context=".AddBridgeListActivity">
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/background_3"
+            android:padding="10dp"
+            android:text="@string/please_add_atleast_one_bridge_id"
+            android:textColor="@color/mintcream" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            app:passwordToggleEnabled="true"
+            android:focusableInTouchMode="true">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bridge_id"
+                android:inputType="text"
+                android:hint="@string/bridge_id"
+                android:maxLength="15"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:focusable="true"
+            app:passwordToggleEnabled="true"
+            android:focusableInTouchMode="true">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bridge_password"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:maxLength="15"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_button"
+            android:text="@string/plus"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#F0F3F4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+</ScrollView>

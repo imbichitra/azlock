@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/activity_main_relativeLayout"
+    >
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+        <!--<Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            app:layout_widthPercent="7.5%"
+            app:layout_heightPercent="5%"
+            app:layout_marginLeftPercent="4%"
+            android:id="@+id/notification_textView"
+            android:background="@drawable/circle_button_selector"
+            android:layout_centerVertical="true" />-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/battery_imageView"
+            android:src="@mipmap/ic_battery_20_black_36dp"
+            android:rotation="270"
+            app:layout_marginRightPercent="3%"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/battery_imageview"
+            app:tint="@color/dimgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_22"
+            android:textSize="14sp"
+            app:layout_marginRightPercent="1%"
+            android:id="@+id/battery_percent_textView"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/battery_imageView" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lockImageButton"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickLockImageButton"
+            android:src="@drawable/lock_src_selector"
+            android:contentDescription="@string/LacertaDevice"
+            android:layout_gravity="center"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/LacertaDoorName"
+            android:id="@+id/doorTextView"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginBottom="4dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout4">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"
+            android:id="@+id/progressBar"
+            android:visibility="invisible"
+            android:indeterminate="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:id="@+id/access_status"
+            android:visibility="invisible"
+            android:layout_marginStart="10dp"
+            android:text="@string/accessing_lock"/>
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_fab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        fab:menu_backgroundColor="#ccbababa"
+        fab:menu_colorNormal="@color/light_blue"
+        fab:menu_colorPressed="@color/dodger_blue"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/exit_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onExitFabClick"
+            android:src="@mipmap/ic_exit_to_app_white_24dp"
+            fab:fab_colorNormal="@color/light_blue"
+            fab:fab_colorPressed="@color/dodger_blue"
+            fab:fab_label="Exit"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/disconnect_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDisconnectFabClick"
+            android:src="@mipmap/ic_portable_wifi_off_white_24dp"
+            fab:fab_colorNormal="@color/light_blue"
+            fab:fab_colorPressed="@color/dodger_blue"
+            fab:fab_label="Disconnect"
+            fab:fab_size="mini" />
+        <!--<com.github.clans.fab.FloatingActionButton
+            android:id="@+id/conn_mode_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_home_white_24dp"
+            fab:fab_colorNormal="@color/light_blue"
+            fab:fab_colorPressed="@color/dodger_blue"
+            fab:fab_size="mini"
+            fab:fab_label="Connection Mode" />-->
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

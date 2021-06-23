@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:contentDescription="@string/todo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guest_imageView"
+            android:src="@mipmap/ic_user_"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/guest_name"
+            android:id="@+id/alternate_owner_name_editText"
+            android:scrollbars="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="86dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/key_shared"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="86dp"
+            android:id="@+id/alternate_owner_mac_editText" />
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="@string/pin"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:maxLength="4"
+        android:inputType="numberPassword"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/pin_editText" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/delete_all_guests"
+        android:id="@+id/delete_guests_checkBox" />
+
+    <CheckBox
+        android:id="@+id/del_log_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:text="@string/delete_all_logs"
+        android:textSize="15sp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/confirm_to_change_owner"
+        android:id="@+id/alternate_phone_confirmation_checkBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_action_will_remove_your_ownership_from_this_device"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/note_textView"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

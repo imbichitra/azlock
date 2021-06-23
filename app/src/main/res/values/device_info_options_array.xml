@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="device_info_options">
+        <!--<item>Lock/Unlock Sound</item>-->
+        <!--<item>IMEI Information</item>-->
+       <!-- <item>Ask Pin every time</item>
+        <item>Change PIN</item>-->
+        <item>Rename Door</item>
+        <item>Tamper Notification</item>
+        <item>Ajar</item>
+        <item>Auto Lock</item>
+    <!--    <item>Saved Networks</item>-->
+    </string-array>
+</resources>

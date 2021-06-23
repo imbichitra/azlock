@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/Settings"
+        android:enabled="true"
+        android:icon="@mipmap/ic_settings_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/LacertaSettings"
+        android:visible="true"
+        android:visibility="visible"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/Config_bridge"
+        android:title="@string/config_bridge"
+        android:actionLayout="@layout/connection_mode"
+        android:orderInCategory="101" app:showAsAction="never"/>
+
+    <item android:id="@+id/Key"
+        android:title="@string/key"
+        android:actionLayout="@layout/connection_mode"
+        android:orderInCategory="102" app:showAsAction="never"/>
+
+</menu>

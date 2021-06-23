@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/Settings" android:title="@string/LacertaSettings"
+        android:icon="@mipmap/ic_settings_white_24dp"
+        android:orderInCategory="100" app:showAsAction="ifRoom"/>
+    <item android:id="@+id/viewGuest"
+        android:title="@string/LacertaGuests"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/History"
+        android:title="@string/LacertaHistory"
+        android:orderInCategory="100" app:showAsAction="never"/>
+    <item android:id="@+id/Version"
+        android:title="@string/version"
+        android:orderInCategory="100" app:showAsAction="never"/>
+
+    <item android:id="@+id/changeDevice" android:title="@string/LacertaChangeDevice"
+        android:visible="false"
+        android:orderInCategory="100" app:showAsAction="never"/>
+    <!--AZFACTORYMODE: comment this in non factory mode-->
+   <!-- <item android:id="@+id/reset" android:title="Factory Reset"
+        android:visible="true"
+        android:orderInCategory="100" app:showAsAction="never"/>-->
+<!--    <item android:id="@+id/About"
+        android:title="@string/LacertaAbout"
+        android:orderInCategory="100"/>
+    <item android:id="@+id/Guide"
+        android:title="@string/LacertaGuide"
+        android:orderInCategory="100"/>-->
+</menu>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+
+        <!--  Email Label -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <EditText android:id="@+id/mac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="17"
+                android:hint="@string/lock_mac"
+                android:inputType="text"
+                android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  Password Label -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <EditText android:id="@+id/Cno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="13"
+                android:hint="@string/contact_number"
+                android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <EditText android:id="@+id/edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/issue"
+                android:maxLength="40"
+                android:inputType="text"
+                android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:hint="@string/description"
+                android:inputType="text|textMultiLine"
+                android:gravity="top"
+                android:background="@drawable/thickness"
+                android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textAlignment="gravity"
+            android:background="@drawable/background"
+            android:textColor="@android:color/white"
+            android:onClick="clicked"/>
+    </LinearLayout>
+</ScrollView>
